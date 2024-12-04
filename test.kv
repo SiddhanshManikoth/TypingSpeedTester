@@ -1,0 +1,34 @@
+#:kivy 1.0.9
+
+
+#:import Clock kivy.clock.Clock
+
+
+<TypingSpeedTest>:
+    orientation: 'vertical'
+
+    Label:
+        id: timer
+        text:'0'
+        font_size: 50
+        pos: 0,500
+        size_hint_y : None
+        height: 150
+
+    Label:
+        id: written_text
+        text:root.random_sentence.lower()
+        font_size:50
+        size_hint_y : None
+        height: 800
+        text_size: self.width, None
+    TextInput:
+        id: user_input
+        font_size: 50
+        size_hint_y : None
+        text_size: self.width, None
+        height: 200
+        text:''
+
+
+
