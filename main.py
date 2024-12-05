@@ -40,8 +40,14 @@ class TypingSpeedTest(FloatLayout):
         for i in range(0, len(self.typed_str)):
             if (self.typed_str[i]).upper() == (self.compare_sentence[i]).upper():
                 r = r + 1
+                user_input=self.ids['user_input']
+                color=[0,0,0,1]
+                user_input.foreground_color=color
             else:
                 w = w + 1
+                user_input = self.ids['user_input']
+                color=[1, 0, 0, 1]
+                user_input.foreground_color = color
 
         self.timer=round(self.timer+0.5,2)
         show_time=self.ids['timer']
